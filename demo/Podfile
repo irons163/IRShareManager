@@ -1,0 +1,16 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'demo' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for demo
+  pod 'MagicalRecord/CocoaLumberjack', :git => 'https://github.com/magicalpanda/MagicalRecord'
+  pod 'AFNetworking'
+  pod 'Masonry'
+  pod 'SDWebImage', '~>3.8'
+  pod 'IRMusicPlayer'
+  pod 'IRPlayer', '~> 0.3.2'
+  pod 'IRGallery'
+end
