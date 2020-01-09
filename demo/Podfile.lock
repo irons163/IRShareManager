@@ -73,7 +73,7 @@ SPEC CHECKSUMS:
   IRGallery: db71673bcd206baa5d5d9504f31b785d333de718
   IRMusicPlayer: ec95a4606bf68cf8dbb45c7d1121a29025c7a66b
   IRPlayer: 1448253d7c87c9cbdd7bd288d8a0edbdd17494a6
-  IRShareManager: cc67b88ca5e24721f74ae25fb6f465797df12a4d
+  IRShareManager: d41d1bc84120ec6aa3ac93cf65e5bb784f91ed63
   MagicalRecord: 1f22a766156474d9f46a9b1e1ce59ca9e37830fc
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDWebImage: a72e880a8fe0f7fc31efe15aaed443c074d2a80c

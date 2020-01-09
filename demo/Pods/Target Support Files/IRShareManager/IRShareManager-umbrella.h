@@ -12,7 +12,6 @@
 
 #import "IRShare.h"
 #import "IRShareManager.h"
-#import "ShareViewController.h"
 
 FOUNDATION_EXPORT double IRShareManagerVersionNumber;
 FOUNDATION_EXPORT const unsigned char IRShareManagerVersionString[];

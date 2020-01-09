@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C9D4AEA8725B15EAE56E646 /* Pods_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890AC77684A8F713A42B5AFD /* Pods_demo.framework */; };
 		8A46757623C7220500EB5E39 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A48A40E23C6E8E200C58789 /* ShareViewController.m */; };
+		8A46757F23C7266700EB5E39 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A46757E23C7266600EB5E39 /* Localizable.strings */; };
 		8A48A3FE23C6E41300C58789 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A48A3FC23C6E41300C58789 /* MainInterface.storyboard */; };
 		8A48A40923C6E63C00C58789 /* ShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8A48A3F723C6E41200C58789 /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8A8A28F523878A7600D5CD91 /* AZAPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A28F223878A7600D5CD91 /* AZAPreviewController.m */; };
@@ -87,6 +88,7 @@
 		890AC77684A8F713A42B5AFD /* Pods_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A46750A23C71B4200EB5E39 /* IRShareManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IRShareManager.xcodeproj; path = ../IRShareManager.xcodeproj; sourceTree = "<group>"; };
 		8A46757923C7230A00EB5E39 /* ShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension.entitlements; sourceTree = "<group>"; };
+		8A46757E23C7266600EB5E39 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		8A48A3F723C6E41200C58789 /* ShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A48A3FD23C6E41300C58789 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		8A48A3FF23C6E41300C58789 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				8A48A40E23C6E8E200C58789 /* ShareViewController.m */,
 				8A48A3FC23C6E41300C58789 /* MainInterface.storyboard */,
 				8A48A3FF23C6E41300C58789 /* Info.plist */,
+				8A46757E23C7266600EB5E39 /* Localizable.strings */,
 			);
 			path = ShareExtension;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A48A3FE23C6E41300C58789 /* MainInterface.storyboard in Resources */,
+				8A46757F23C7266700EB5E39 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

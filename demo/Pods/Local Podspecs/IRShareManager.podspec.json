@@ -13,9 +13,5 @@
     "git": "https://github.com/irons163/IRShareManager.git",
     "tag": "0.1.0"
   },
-  "source_files": [
-    "IRShareManager/**/*.{h,m}",
-    "IRShare/**/*"
-  ],
-  "exclude_files": "IRShare/**/info.plist"
+  "source_files": "IRShareManager/**/*.{h,m}"
 }
