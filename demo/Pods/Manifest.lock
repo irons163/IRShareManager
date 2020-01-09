@@ -24,6 +24,7 @@ PODS:
   - IRMusicPlayer (0.1.0)
   - IRPlayer (0.3.5):
     - IRFFMpeg
+  - IRShareManager (0.1.0)
   - MagicalRecord/CocoaLumberjack (2.4.0):
     - CocoaLumberjack (~> 3.0)
     - MagicalRecord/Core
@@ -38,6 +39,7 @@ DEPENDENCIES:
   - IRGallery
   - IRMusicPlayer
   - IRPlayer (~> 0.3.2)
+  - IRShareManager (from `../IRShareManager.podspec`)
   - MagicalRecord/CocoaLumberjack (from `https://github.com/magicalpanda/MagicalRecord`)
   - Masonry
   - SDWebImage (~> 3.8)
@@ -54,12 +56,14 @@ SPEC REPOS:
     - SDWebImage
 
 EXTERNAL SOURCES:
+  IRShareManager:
+    :path: "../IRShareManager.podspec"
   MagicalRecord:
     :git: https://github.com/magicalpanda/MagicalRecord
 
 CHECKOUT OPTIONS:
   MagicalRecord:
-    :commit: 257b476277a146374f16662fab05f48cff879dae
+    :commit: 6031f608b79c1d6802007aaed6efd100e11f59ba
     :git: https://github.com/magicalpanda/MagicalRecord
 
 SPEC CHECKSUMS:
@@ -69,10 +73,11 @@ SPEC CHECKSUMS:
   IRGallery: db71673bcd206baa5d5d9504f31b785d333de718
   IRMusicPlayer: ec95a4606bf68cf8dbb45c7d1121a29025c7a66b
   IRPlayer: 1448253d7c87c9cbdd7bd288d8a0edbdd17494a6
+  IRShareManager: cc67b88ca5e24721f74ae25fb6f465797df12a4d
   MagicalRecord: 1f22a766156474d9f46a9b1e1ce59ca9e37830fc
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDWebImage: a72e880a8fe0f7fc31efe15aaed443c074d2a80c
 
-PODFILE CHECKSUM: 6af16012fcc546a8ffe8ef226c83a1988902a994
+PODFILE CHECKSUM: fcfbe834c0ad9bc18a5a97370d76b15b87fcc5c8
 
-COCOAPODS: 1.8.0.beta.2
+COCOAPODS: 1.8.4

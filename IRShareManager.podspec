@@ -7,20 +7,11 @@ Pod::Spec.new do |spec|
   spec.license      = "MIT"
   spec.author       = "irons163"
   spec.platform     = :ios, "9.0"
-  spec.source       = { :git => "https://github.com/irons163/IRPasscode.git", :tag => spec.version.to_s }
-  spec.source_files  = "IRShareManager/**/*.{h,m}"
- 
-  spec.app_spec 'ToastCatalog' do |app_spec|
-    app_spec.info_plist = {
-      'CFBundleIdentifier' => 'com.bakery.ToastCatalog',
-      'UISupportedInterfaceOrientations' => [
-        'UIInterfaceOrientationPortrait',
-        'UIInterfaceOrientationLandscapeLeft',
-        'UIInterfaceOrientationLandscapeRight',
-      ],
-      'UILaunchStoryboardName' => 'LaunchScreen',
-      'UIMainStoryboardFile' => 'AppStoryboard',
-      'NSLocationWhenInUseUsageDescription' => 'ToastCatalog uses your location to find nearby Toast!'
-    }
-  end
+  spec.source       = { :git => "https://github.com/irons163/IRShareManager.git", :tag => spec.version.to_s }
+  spec.source_files  = "IRShareManager/**/*.{h,m}", "IRShare/**/*"
+  spec.exclude_files = "IRShare/**/info.plist"
+  #spec.app_spec 'SampleApp' do |app_spec|
+    #app_spec.source_files = "IRShare/**/*"
+    # app_spec.exclude_files = "IRShare/**/info.plist"
+  #end
 end

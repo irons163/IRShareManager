@@ -28,7 +28,7 @@
 #import "AppDelegate.h"
 #import "UIImageView+WebCache.h"
 #import "Masonry.h"
-#import "Utility.h"
+#import "DemoUtility.h"
 
 @implementation DocumentListViewController {
     NSMutableArray *items;
@@ -171,11 +171,11 @@
     if (self.fileType == VIDEO_TYPE) {
         [self setThumbToCell:cell byVideoPath:filePath];
     } else if(self.fileType == MUSIC_TYPE) {
-        cell.thumbnailImageView.image = [Utility getMusicCover:filePath];
+        cell.thumbnailImageView.image = [DemoUtility getMusicCover:filePath];
         if(cell.thumbnailImageView.image==nil)
-            cell.thumbnailImageView.image = [Utility getImageWithType:@"MUSIC" ext:[cell.titleLabel.text pathExtension]];
+            cell.thumbnailImageView.image = [DemoUtility getImageWithType:@"MUSIC" ext:[cell.titleLabel.text pathExtension]];
     } else if(self.fileType == DOCUMENT_TYPE) {
-        cell.thumbnailImageView.image = [Utility getImageWithType:@"DOCUMENT" ext:[cell.titleLabel.text pathExtension]];
+        cell.thumbnailImageView.image = [DemoUtility getImageWithType:@"DOCUMENT" ext:[cell.titleLabel.text pathExtension]];
     } else if(self.fileType == PHOTO_TYPE) {
         
     } else if(self.fileType == ALL_TYPE) {
@@ -183,7 +183,7 @@
             [self setThumbToCell:cell byVideoPath:filePath];
         } else if([file.type isEqualToString:@"MUSIC"]) {
             if(cell.thumbnailImageView.image==nil)
-                cell.thumbnailImageView.image = [Utility getImageWithType:@"MUSIC" ext:[cell.titleLabel.text pathExtension]];
+                cell.thumbnailImageView.image = [DemoUtility getImageWithType:@"MUSIC" ext:[cell.titleLabel.text pathExtension]];
         } else if([file.type isEqualToString:@"PICTURE"]) {
             cell.thumbnailImageView.image = [UIImage imageNamed:@"img_photo.jpg"];
             @autoreleasepool {
@@ -191,7 +191,7 @@
                 }];
             }
         } else {
-            cell.thumbnailImageView.image = [Utility getImageWithType:file.type ext:[cell.titleLabel.text pathExtension]];
+            cell.thumbnailImageView.image = [DemoUtility getImageWithType:file.type ext:[cell.titleLabel.text pathExtension]];
         }
     }
     
@@ -216,14 +216,14 @@
         [cell.operation cancel];
     }
     
-    cell.thumbnailImageView.image = [Utility getImageWithType:@"VIDEO" ext:[cell.titleLabel.text pathExtension]];
+    cell.thumbnailImageView.image = [DemoUtility getImageWithType:@"VIDEO" ext:[cell.titleLabel.text pathExtension]];
     
     NSOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
-        UIImage *image = [Utility generateThumbImage:filePath];
+        UIImage *image = [DemoUtility generateThumbImage:filePath];
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             cell.thumbnailImageView.image = image;
             if(cell.thumbnailImageView.image==nil)
-                cell.thumbnailImageView.image = [Utility getImageWithType:@"VIDEO" ext:[cell.titleLabel.text pathExtension]];
+                cell.thumbnailImageView.image = [DemoUtility getImageWithType:@"VIDEO" ext:[cell.titleLabel.text pathExtension]];
         }];
     }];
     

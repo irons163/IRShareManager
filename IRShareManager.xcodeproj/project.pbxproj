@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A48A42323C6F38300C58789 /* ShareViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AC153CC2383D1C0004D54D6 /* ShareViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A48A45023C7056A00C58789 /* IRShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A48A44E23C7056A00C58789 /* IRShare.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A48A45123C7056A00C58789 /* IRShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A48A44F23C7056A00C58789 /* IRShare.m */; };
 		8AC153932383CC54004D54D6 /* IRShareManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AC153912383CC54004D54D6 /* IRShareManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8AC153CE2383D1C0004D54D6 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC153CD2383D1C0004D54D6 /* ShareViewController.m */; };
 		8AC153D12383D1C0004D54D6 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC153CF2383D1C0004D54D6 /* MainInterface.storyboard */; };
@@ -14,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A48A44E23C7056A00C58789 /* IRShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRShare.h; sourceTree = "<group>"; };
+		8A48A44F23C7056A00C58789 /* IRShare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IRShare.m; sourceTree = "<group>"; };
 		8AC1538E2383CC54004D54D6 /* IRShareManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IRShareManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC153912383CC54004D54D6 /* IRShareManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRShareManager.h; sourceTree = "<group>"; };
 		8AC153922383CC54004D54D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +88,8 @@
 		8AC153C52383CCEE004D54D6 /* Share */ = {
 			isa = PBXGroup;
 			children = (
+				8A48A44E23C7056A00C58789 /* IRShare.h */,
+				8A48A44F23C7056A00C58789 /* IRShare.m */,
 			);
 			path = Share;
 			sourceTree = "<group>";
@@ -108,6 +115,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AC153932383CC54004D54D6 /* IRShareManager.h in Headers */,
+				8A48A45023C7056A00C58789 /* IRShare.h in Headers */,
+				8A48A42323C6F38300C58789 /* ShareViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A48A45123C7056A00C58789 /* IRShare.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +421,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.irons163.IRShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -431,6 +442,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.irons163.IRShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

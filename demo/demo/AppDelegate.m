@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "Utility.h"
+#import "DemoUtility.h"
+#import <IRShareManager/IRShareManager.h>
 
 @interface AppDelegate ()
 
@@ -49,9 +50,10 @@
 
 //share from ShareExtention
 -(void)saveImageIfExistInActionExtention{
-    NSURL *directoryURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.com.irons163.IRShare"];
+    [IRShare sharedInstance].groupID = @"group.com.irons163.IRShare";
+    NSURL *directoryURL = [IRShare sharedInstance].directoryURL;
+    
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    directoryURL = [directoryURL URLByAppendingPathComponent:@"Library/Caches" isDirectory:YES]; // URL pointing to the directory you want to browse
     NSLog(@"%@", [NSString stringWithFormat:@"directoryURL:%@" , directoryURL]);
     NSArray *keys = [NSArray arrayWithObject:NSURLIsDirectoryKey];
     
@@ -106,12 +108,12 @@
 
     [[NSFileManager defaultManager] copyItemAtPath:[url path] toPath:filePath error:nil];
 
-    NSString *fileTypeString = [Utility getFileType:[fileName pathExtension]];
+    NSString *fileTypeString = [DemoUtility getFileType:[fileName pathExtension]];
     File *file = [File MR_createEntity];
     file.name = fileName;
     file.type = fileTypeString;
-    file.size = [[Utility getFileSize:filePath] longLongValue];
-    file.createTime = [Utility getFileCreationTimeFromPath:filePath];
+    file.size = [[DemoUtility getFileSize:filePath] longLongValue];
+    file.createTime = [DemoUtility getFileCreationTimeFromPath:filePath];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {

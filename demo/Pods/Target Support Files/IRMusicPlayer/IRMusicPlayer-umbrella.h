@@ -14,7 +14,7 @@
 #import "KeysDefine.h"
 #import "StatusClass.h"
 #import "UIColor+Helper.h"
-#import "UIImage+Bundle.h"
+//#import "UIImage+Bundle.h"
 #import "Utilities.h"
 #import "IRMusicPlayer.h"
 

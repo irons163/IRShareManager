@@ -1,0 +1,6 @@
+framework module IRShareManager {
+  umbrella header "IRShareManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

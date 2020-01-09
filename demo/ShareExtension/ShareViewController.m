@@ -1,6 +1,6 @@
 //
 //  ShareViewController.m
-//  IRShare
+//  demo
 //
 //  Created by Phil on 2019/11/19.
 //  Copyright © 2019 Phil. All rights reserved.
@@ -14,12 +14,7 @@
 
 @end
 
-@implementation ShareViewController{
-    int inputItemsCount;
-    int counter;
-    dispatch_queue_t queue;
-}
-
+@implementation ShareViewController
 - (BOOL)isContentValid {
     // Do validation of contentText and/or NSExtensionContext attachments here
     [self.textView setText:NSLocalizedStringFromTable(@"ShareMessage", @"Localizable",nil)];
@@ -32,11 +27,6 @@
 - (void)didSelectPost {
     [[IRShare sharedInstance] showSaveAlertIn:self];
     [[IRShare sharedInstance] didSelectPostWith:self.extensionContext];
-}
-
-- (NSArray *)configurationItems {
-    // To add configuration options via table cells at the bottom of the sheet, return an array of SLComposeSheetConfigurationItem here.
-    return @[];
 }
 
 @end

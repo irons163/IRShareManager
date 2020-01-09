@@ -13,4 +13,6 @@ target 'demo' do
   pod 'IRMusicPlayer'
   pod 'IRPlayer', '~> 0.3.2'
   pod 'IRGallery'
+  pod 'IRShareManager', :path => '../IRShareManager.podspec'
+#  pod 'IRShareManager', :path => '../IRShareManager.podspec', :appspecs => ['SampleApp']
 end

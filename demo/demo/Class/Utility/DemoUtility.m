@@ -6,10 +6,10 @@
 //  Copyright © 2019 Phil. All rights reserved.
 //
 
-#import "Utility.h"
+#import "DemoUtility.h"
 #import <AVFoundation/AVFoundation.h>
 
-@implementation Utility
+@implementation DemoUtility
 
 + (NSDate *)getFileCreationTimeFromPath:(NSString *)filePath {
     NSFileManager* fm = [NSFileManager defaultManager];

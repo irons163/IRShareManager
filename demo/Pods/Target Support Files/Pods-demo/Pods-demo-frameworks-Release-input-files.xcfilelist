@@ -5,6 +5,7 @@ ${BUILT_PRODUCTS_DIR}/IRFFMpeg/IRFFMpeg.framework
 ${BUILT_PRODUCTS_DIR}/IRGallery/IRGallery.framework
 ${BUILT_PRODUCTS_DIR}/IRMusicPlayer/IRMusicPlayer.framework
 ${BUILT_PRODUCTS_DIR}/IRPlayer/IRPlayer.framework
+${BUILT_PRODUCTS_DIR}/IRShareManager/IRShareManager.framework
 ${BUILT_PRODUCTS_DIR}/MagicalRecord/MagicalRecord.framework
 ${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework
 ${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework

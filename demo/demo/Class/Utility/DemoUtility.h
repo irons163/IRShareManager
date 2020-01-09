@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Utility : NSObject
+@interface DemoUtility : NSObject
 
 + (NSDate *)getFileCreationTimeFromPath:(NSString *)filePath ;
 + (NSNumber *)getFileSize:(NSString *)filepath;
