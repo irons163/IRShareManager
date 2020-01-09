@@ -6,8 +6,7 @@
 - IRShareManager is a easy framework for deal with share files between the share extension and main app.
 
 ## Features
-- MVVM structure.
-- Flexible, Reusable.
+- Easy to share files into main app by Share Extension.
 
 ## Install
 ### Git
