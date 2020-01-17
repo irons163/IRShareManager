@@ -18,6 +18,23 @@
 
 ### Cocoapods
 - Add `pod 'IRShareManager'`  in the `Podfile`
+```objc
+target 'Demo' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Demo
+  pod 'IRShareManager'
+end
+
+target 'ShareExtension' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ShareExtension
+  pod 'IRShareManager'
+end
+```
 - `pod install`
 
 ## Usage
@@ -30,7 +47,7 @@
 
 - Put codes into `ShareViewController.m`
 
-```obj-c
+```
 ...
 #import <IRShareManager/IRShare.h>
 
