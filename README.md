@@ -96,6 +96,7 @@ end
     NSURL *directoryURL = [IRShare sharedInstance].directoryURL;
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *keys = [NSArray arrayWithObject:NSURLIsDirectoryKey];
     NSDirectoryEnumerator *enumerator = [fileManager
     enumeratorAtURL:directoryURL
     includingPropertiesForKeys:keys
@@ -115,7 +116,7 @@ end
             // handle error
         }
         else if (! [isDirectory boolValue]) {
-            [self saveImportFileIntoDB:url autoOpenFileWhileAPPapear:NO];
+            [self saveImportFileIntoDB:url];
         }
         
         [urlsToDelete addObject:url];
@@ -124,6 +125,19 @@ end
     for(NSURL *url in urlsToDelete){
         [[NSFileManager defaultManager] removeItemAtURL:url error:nil];
     }
+}
+
+- (void)saveImportFileIntoDB:(NSURL *)url {
+    NSString *fileName = [[url absoluteString] lastPathComponent];
+    fileName = [fileName stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    NSString *resourceDocPath = [[NSString alloc] initWithString:[[NSTemporaryDirectory() stringByDeletingLastPathComponent]stringByAppendingPathComponent:@"Documents"]];
+    
+    fileName = [self getNewFileNameIfExistsByFileName:fileName];
+    
+    NSString *filePath = [resourceDocPath stringByAppendingPathComponent:fileName];
+
+    [[NSFileManager defaultManager] copyItemAtPath:[url path] toPath:filePath error:nil];
 }
 
 @end
